@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1591991309 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\main.cpp
+	<iostream>
+	"SDL.h"
+	"Engine.h"
+
+1591992092 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\engine.h
+	"SDL.h"
+	"SDL_image.h"
+
+1591993324 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\engine.cpp
+	"Engine.h"
+	<iostream>
+
+1592009231 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\graphics\texture.cpp
+	"Texture.h"
+	"../Engine.h"
+
+1592009142 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\graphics\texture.h
+	"SDL.h"
+	"SDL_image.h"
+	"string"
+	<map>
+

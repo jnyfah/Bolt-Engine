@@ -1,24 +1,52 @@
 # depslib dependency file v1.0
-1591991309 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\main.cpp
+1592733761 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\main.cpp
 	<iostream>
 	"SDL.h"
 	"Engine.h"
 
-1591992092 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\engine.h
+1592746270 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\engine.cpp
+	"Engine.h"
+	<iostream>
+	"Warrior.h"
+	"Texture.h"
+
+1592734541 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\engine.h
 	"SDL.h"
 	"SDL_image.h"
 
-1591993324 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\engine.cpp
-	"Engine.h"
-	<iostream>
-
-1592009231 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\graphics\texture.cpp
+1592745713 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\graphics\texture.cpp
 	"Texture.h"
 	"../Engine.h"
 
-1592009142 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\graphics\texture.h
+1592736456 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\graphics\texture.h
 	"SDL.h"
 	"SDL_image.h"
 	"string"
 	<map>
+
+1592746311 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\characters\warrior.cpp
+	"Warrior.h"
+	"../Graphics/Texture.h"
+	"SDL.h"
+
+1592745717 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\characters\warrior.h
+	"Character.h"
+
+1592741748 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\characters\character.h
+	"GameObject.h"
+	<string>
+
+1592744488 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\object\gameobject.h
+	"IObject.h"
+	"Transform.h"
+	<string>
+	"SDL.h"
+
+1592741762 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\object\iobject.h
+
+1592743743 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\physics\transform.h
+	"Vector2D.h"
+
+1592743428 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\physics\vector2d.h
+	<iostream>
 

@@ -2,22 +2,21 @@
 #include "SDL.h"
 #include "Engine.h"
 
-
+using namespace std;
 
 int main(int argc, char** argv)
 {
-    Engine::Getinstance()->Init();
+    Engine::Get_instance()->Init();
 
-    while(Engine::Getinstance()->is_Running())
+    while(Engine::Get_instance()->isRunning())
     {
-        Engine::Getinstance()->Events();
 
-        Engine::Getinstance()->Update();
+        Engine::Get_instance()->Events();
+        Engine::Get_instance()->Update();
+        Engine::Get_instance()->Render();
 
-        Engine::Getinstance()->Render();
     }
 
-    Engine::Getinstance()->Clean();
-
+    Engine::Get_instance()->Clean();
     return 0;
 }

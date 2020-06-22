@@ -1,8 +1,9 @@
 #include "Texture.h"
+
 #include "../Engine.h"
 
 
-Texture* Texture::s_instance = nullptr;
+Texture* Texture::instance = nullptr;
 
 bool Texture::Load(std::string id, std::string filename)
 {
@@ -13,7 +14,7 @@ bool Texture::Load(std::string id, std::string filename)
         return false;
     }
 
-    SDL_Texture* texture = SDL_CreateTextureFromSurface(Engine::Getinstance()->Get_renderer(), surface);
+    SDL_Texture* texture = SDL_CreateTextureFromSurface(Engine::Get_instance()->Get_Renderer(), surface);
     if (texture == nullptr)
     {
         SDL_Log(" failed to load texture: %s", SDL_GetError());
@@ -34,22 +35,32 @@ void Texture::Drop(std::string id)
 
 void Texture::Clean()
 {
-    std::map<std::string, SDL_Texture*>::iterator it;
-    for(it = Texturemap.begin(); it!=Texturemap.end(); it++ )
-    {
-        SDL_DestroyTexture(it->second)
-    }
+  std::map<std::string,  SDL_Texture*>::iterator it;
+
+  for(it = Texturemap.begin(); it!= Texturemap.end(); it++)
+  {
+      SDL_DestroyTexture(it->second);
+
+  }
+  Texturemap.clear();
+  SDL_Log("texture map cleaned!");
 }
 
-void Texture::Draw(std::string id, int x, int y, int width, int height, SDL_RendererFlip flip)
+void Texture::Draw(std::string id, int x, int y, int width, int hgt, SDL_RendererFlip flip)
 {
-    SDL_Rect src_rect = {0, 0,width, height};
-    SDL_Rect dst_rect = {x, y, width, height};
-    SDL_RenderCopyEx(Engine::Getinstance()->Get_renderer(), Texturemap[id], &src_rect, &dst_rect, 0, nullptr, flip);
+    SDL_Rect src_rect = {0, 0,width, hgt};
+    SDL_Rect dst_rect = {x, y, width, hgt};
+    SDL_RenderCopyEx(Engine::Get_instance()->Get_Renderer(), Texturemap[id], &src_rect, &dst_rect, 0, nullptr, flip);
 
 }
 
-Texture::~Texture()
+void Texture::DrawFrame(std::string id, int x, int y, int width, int hgt, int row, int frame,  SDL_RendererFlip flip)
 {
+    SDL_Rect src_rect = {width*frame, hgt*(row-1), width, hgt};
+    SDL_Rect dst_rect = {x, y, width, hgt};
+    SDL_RenderCopyEx(Engine::Get_instance()->Get_Renderer(), Texturemap[id], &src_rect, &dst_rect, 0, nullptr, flip);
 
 }
+
+
+

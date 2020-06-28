@@ -1,7 +1,10 @@
 #include "Engine.h"
-#include <iostream>
+
 #include "Warrior.h"
 #include  "Texture.h"
+#include "Event.h"
+#include "Timer.h"
+#include "SDL.h"
 
 
 
@@ -32,8 +35,9 @@ bool Engine::Init()
       return false;
     }
 
-   Texture::Getinstance()->Load("player", "assets/knight walk animation.png");
-   player = new Warrior(new Properties ("player", 30 , 40, 136, 96));
+   Texture::Getinstance()->Load("player", "assets/bandit1.png");
+   Texture::Getinstance()->Load("player_run", "assets/bandit1run.png");
+   player = new Warrior(new Properties ("player", 48 , 48, 136, 96));
 
   return status = true;
 
@@ -56,8 +60,9 @@ void Engine::Quit()
 
 void Engine::Update()
 {
-   player->Update(0);
-    //std::cout <<"updating.."<<std::endl;
+    float dt = Timer::Get_Instance()->Get_deltatime();
+
+   player->Update(dt);
 }
 
 void Engine::Render()
@@ -73,12 +78,5 @@ SDL_RenderPresent(render);
 
 void Engine::Events()
 {
-     SDL_Event event;
-     SDL_PollEvent(&event);
-     switch(event.type)
-     {
-     case SDL_QUIT:
-        Quit();
-        break;
-     }
+     Event::Get_Instance()->Listen();
 }

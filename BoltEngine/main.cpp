@@ -1,5 +1,5 @@
 #include <iostream>
-#include "SDL.h"
+#include "Timer.h"
 #include "Engine.h"
 
 using namespace std;
@@ -14,6 +14,7 @@ int main(int argc, char** argv)
         Engine::Get_instance()->Events();
         Engine::Get_instance()->Update();
         Engine::Get_instance()->Render();
+        Timer::Get_Instance()->Tick();
 
     }
 

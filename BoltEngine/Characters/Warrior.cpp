@@ -1,30 +1,53 @@
 #include "Warrior.h"
+#include "Event.h"
 
 #include "../Graphics/Texture.h"
 #include "SDL.h"
 
 
 
+
 Warrior::Warrior(Properties* props):Character(props)
 {
- m_row =1;
-    m_framecount = 4;
-    m_speed = 100;
+
+    Anime = new Animation();
+    m_rigidbody = new RigidBody;
+    Anime->setprops(m_textureID, 1,8,150, SDL_FLIP_HORIZONTAL);
 }
 
 void Warrior::Draw()
 {
-   Texture::Getinstance()->DrawFrame(m_textureID, trans->X, trans->Y, m_width, m_height, m_row, m_frame);
+    Anime -> draw(trans->X, trans->Y, m_width, m_height);
 }
 
 void Warrior::Update(float dt)
 {
-  m_frame = (SDL_GetTicks()/m_speed) % m_framecount;
+    Anime->setprops("player", 1,4,150, SDL_FLIP_HORIZONTAL);
+    m_rigidbody->unsetforce();
+
+    if (Event::Get_Instance()->Get_KeyDown(SDL_SCANCODE_LEFT))
+    {
+        m_rigidbody->applyforceX(10 * BACKWARD);
+        Anime->setprops("player_run", 1,8,150);
+    }
+
+    if (Event::Get_Instance()->Get_KeyDown(SDL_SCANCODE_RIGHT))
+    {
+        m_rigidbody->applyforceX(10 * FOWARD);
+        Anime->setprops("player_run", 1,8,150, SDL_FLIP_HORIZONTAL);
+    }
+
+
+    m_rigidbody->update(0.5);
+
+    trans->TranslateX(m_rigidbody->Position().X);
+    //trans->TranslateY(m_rigidbody->Position().Y);
+    Anime->update();
 }
 
 void Warrior::Clean()
 {
-Texture::Getinstance()->Clean();
+    Texture::Getinstance()->Clean();
 }
 
 

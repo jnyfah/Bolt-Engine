@@ -14,6 +14,12 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="./" />
+					<Add directory="Graphics" />
+					<Add directory="Physics" />
+					<Add directory="Object" />
+					<Add directory="Characters" />
+					<Add directory="Events" />
+					<Add directory="Timer" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -24,6 +30,12 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="./" />
+					<Add directory="Graphics" />
+					<Add directory="Physics" />
+					<Add directory="Object" />
+					<Add directory="Characters" />
+					<Add directory="Events" />
+					<Add directory="Timer" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -34,8 +46,24 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Characters/Character.h" />
+		<Unit filename="Characters/Warrior.cpp" />
+		<Unit filename="Characters/Warrior.h" />
 		<Unit filename="Engine.cpp" />
 		<Unit filename="Engine.h" />
+		<Unit filename="Events/Event.cpp" />
+		<Unit filename="Events/Event.h" />
+		<Unit filename="Graphics/Animation.cpp" />
+		<Unit filename="Graphics/Animation.h" />
+		<Unit filename="Graphics/Texture.cpp" />
+		<Unit filename="Graphics/Texture.h" />
+		<Unit filename="Object/GameObject.h" />
+		<Unit filename="Object/IObject.h" />
+		<Unit filename="Physics/RigidBody.h" />
+		<Unit filename="Physics/Transform.h" />
+		<Unit filename="Physics/Vector2D.h" />
+		<Unit filename="Timer/Timer.cpp" />
+		<Unit filename="Timer/Timer.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

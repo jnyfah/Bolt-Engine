@@ -1,6 +1,8 @@
 #ifndef WARRIOR_H
 #define WARRIOR_H
 #include "Character.h"
+#include "Animation.h"
+#include "RigidBody.h"
 
 
 class Warrior: public Character
@@ -13,8 +15,8 @@ class Warrior: public Character
         virtual void Clean();
 
     private:
-        int m_row, m_frame, m_framecount;
-        int m_speed;
+        RigidBody *m_rigidbody;
+        Animation *Anime;
 
 };
 #endif // WARRIOR_H

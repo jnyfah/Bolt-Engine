@@ -1,14 +1,16 @@
 # depslib dependency file v1.0
-1592733761 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\main.cpp
+1593296401 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\main.cpp
 	<iostream>
-	"SDL.h"
+	"Timer.h"
 	"Engine.h"
 
-1592746270 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\engine.cpp
+1593339941 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\engine.cpp
 	"Engine.h"
-	<iostream>
 	"Warrior.h"
 	"Texture.h"
+	"Event.h"
+	"Timer.h"
+	"SDL.h"
 
 1592734541 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\engine.h
 	"SDL.h"
@@ -24,13 +26,16 @@
 	"string"
 	<map>
 
-1592746311 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\characters\warrior.cpp
+1593339941 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\characters\warrior.cpp
 	"Warrior.h"
+	"Event.h"
 	"../Graphics/Texture.h"
 	"SDL.h"
 
-1592745717 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\characters\warrior.h
+1593007071 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\characters\warrior.h
 	"Character.h"
+	"Animation.h"
+	"RigidBody.h"
 
 1592741748 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\characters\character.h
 	"GameObject.h"
@@ -44,9 +49,35 @@
 
 1592741762 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\object\iobject.h
 
-1592743743 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\physics\transform.h
+1593008280 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\physics\transform.h
 	"Vector2D.h"
 
 1592743428 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\physics\vector2d.h
 	<iostream>
+
+1592916457 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\graphics\animation.h
+	"SDL.h"
+	<string>
+
+1592916822 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\graphics\animation.cpp
+	"Animation.h"
+	"Texture.h"
+
+1593289744 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\physics\rigidbody.h
+	"Vector2D.h"
+
+1593009627 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\events\event.h
+	"SDL.h"
+
+1593010775 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\events\event.cpp
+	"Event.h"
+	"../Engine.h"
+
+1593296542 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\timer\timer.h
+
+1593296468 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\timer\timer.cpp
+	"Timer.h"
+	"SDL.h"
+
+1593341500 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\\map
 

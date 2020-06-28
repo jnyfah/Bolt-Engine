@@ -9,12 +9,6 @@ public:
     float X, Y;
 
     Transform(float x= 0, float y = 0):X(x), Y(y) {}
-    void log (std::string mag = " ")
-    {
-        std::cout<<mag<< X << Y <<std::endl;
-    }
-
-private:
 
 
     void TranslateX(float x)

@@ -20,6 +20,7 @@
 					<Add directory="Characters" />
 					<Add directory="Events" />
 					<Add directory="Timer" />
+					<Add directory="Map" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -36,6 +37,7 @@
 					<Add directory="Characters" />
 					<Add directory="Events" />
 					<Add directory="Timer" />
+					<Add directory="Map" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -57,6 +59,10 @@
 		<Unit filename="Graphics/Animation.h" />
 		<Unit filename="Graphics/Texture.cpp" />
 		<Unit filename="Graphics/Texture.h" />
+		<Unit filename="Map/GameMap.h" />
+		<Unit filename="Map/Layer.h" />
+		<Unit filename="Map/TileLayer.cpp" />
+		<Unit filename="Map/TileLayer.h" />
 		<Unit filename="Object/GameObject.h" />
 		<Unit filename="Object/IObject.h" />
 		<Unit filename="Physics/RigidBody.h" />

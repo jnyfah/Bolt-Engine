@@ -2,6 +2,7 @@
 #define ENGINE_H
 #include"SDL.h"
 #include "SDL_image.h"
+#include "GameMap.h"
 
 const int screen_width =940;
 const int screen_height =640;
@@ -11,10 +12,19 @@ class Engine
 
         inline static Engine* Get_instance()
         {
-            return instance = (instance !=nullptr) ? instance : new Engine();
+            if(instance != nullptr)
+            {
+                return instance;
+            }
+            else
+            {
+                return instance = new Engine();
+            }
         }
+
+
         bool Init();
-        bool Clean();
+        void Clean();
         void Quit();
 
         void Update();
@@ -31,12 +41,19 @@ class Engine
             return render;
         }
 
+        inline GameMap* GetMap()
+        {
+            return levelmap;
+        }
+
     private:
         Engine(){}
         static Engine* instance;
         bool status;
         SDL_Window* window;
         SDL_Renderer* render;
+
+        GameMap* levelmap;
 
 };
 

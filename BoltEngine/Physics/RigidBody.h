@@ -20,12 +20,12 @@ class RigidBody
             m_gravity = GRAVITY;
         }
 
-        inline float setmass(float mass)
+        inline void setmass(float mass)
         {
             m_mass = mass;
         }
 
-        inline float setgravity(float gravity)
+        inline void setgravity(float gravity)
         {
             m_gravity = gravity;
         }

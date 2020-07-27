@@ -17,16 +17,16 @@ struct Tileset
 
 
 using Tilesetlist = std::vector<Tileset>;
-using Tilemap = std::vector<std::vector<int>>;
+using Tilemap = std::vector<std::vector<int> >;
 
 
 class TileLayer : public Layer
 {
 public:
-    TileLayer(int tilesize, int width, int height, Tilemap tilemap, Tilesetlist tileset);
+    TileLayer(int tilesize, int rowcount, int colcount, Tilemap tilemap, Tilesetlist tileset);
 
     virtual void Render();
-    virtual void update(float dt);
+    virtual void Update();
     inline Tilemap Get_tilemap()
     {
         return m_tilemap;

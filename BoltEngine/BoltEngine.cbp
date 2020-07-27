@@ -21,6 +21,9 @@
 					<Add directory="Events" />
 					<Add directory="Timer" />
 					<Add directory="Map" />
+					<Add directory="Vendor/tinyxml" />
+					<Add directory="camera" />
+					<Add directory="Collision" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -38,6 +41,8 @@
 					<Add directory="Events" />
 					<Add directory="Timer" />
 					<Add directory="Map" />
+					<Add directory="camera" />
+					<Add directory="Collision" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -51,6 +56,9 @@
 		<Unit filename="Characters/Character.h" />
 		<Unit filename="Characters/Warrior.cpp" />
 		<Unit filename="Characters/Warrior.h" />
+		<Unit filename="Collision/colider.h" />
+		<Unit filename="Collision/collision.cpp" />
+		<Unit filename="Collision/collision.h" />
 		<Unit filename="Engine.cpp" />
 		<Unit filename="Engine.h" />
 		<Unit filename="Events/Event.cpp" />
@@ -61,15 +69,26 @@
 		<Unit filename="Graphics/Texture.h" />
 		<Unit filename="Map/GameMap.h" />
 		<Unit filename="Map/Layer.h" />
+		<Unit filename="Map/MapParser.cpp" />
+		<Unit filename="Map/MapParser.h" />
 		<Unit filename="Map/TileLayer.cpp" />
 		<Unit filename="Map/TileLayer.h" />
 		<Unit filename="Object/GameObject.h" />
 		<Unit filename="Object/IObject.h" />
+		<Unit filename="Physics/Point.h" />
 		<Unit filename="Physics/RigidBody.h" />
 		<Unit filename="Physics/Transform.h" />
 		<Unit filename="Physics/Vector2D.h" />
 		<Unit filename="Timer/Timer.cpp" />
 		<Unit filename="Timer/Timer.h" />
+		<Unit filename="Vendor/tinyxml/tinystr.cpp" />
+		<Unit filename="Vendor/tinyxml/tinystr.h" />
+		<Unit filename="Vendor/tinyxml/tinyxml.cpp" />
+		<Unit filename="Vendor/tinyxml/tinyxml.h" />
+		<Unit filename="Vendor/tinyxml/tinyxmlerror.cpp" />
+		<Unit filename="Vendor/tinyxml/tinyxmlparser.cpp" />
+		<Unit filename="camera/camera.cpp" />
+		<Unit filename="camera/camera.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

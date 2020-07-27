@@ -1,5 +1,5 @@
 #include "Texture.h"
-
+#include "camera.h"
 #include "../Engine.h"
 
 
@@ -49,7 +49,8 @@ void Texture::Clean()
 void Texture::Draw(std::string id, int x, int y, int width, int hgt, SDL_RendererFlip flip)
 {
     SDL_Rect src_rect = {0, 0,width, hgt};
-    SDL_Rect dst_rect = {x, y, width, hgt};
+    Vector2D cam = camera::Get_instance()->Get_postion();
+    SDL_Rect dst_rect = {x - static_cast<int>(cam.X),  y- static_cast<int>(cam.Y), width, hgt};
     SDL_RenderCopyEx(Engine::Get_instance()->Get_Renderer(), Texturemap[id], &src_rect, &dst_rect, 0, nullptr, flip);
 
 }
@@ -57,10 +58,17 @@ void Texture::Draw(std::string id, int x, int y, int width, int hgt, SDL_Rendere
 void Texture::DrawFrame(std::string id, int x, int y, int width, int hgt, int row, int frame,  SDL_RendererFlip flip)
 {
     SDL_Rect src_rect = {width*frame, hgt*(row-1), width, hgt};
-    SDL_Rect dst_rect = {x, y, width, hgt};
+    Vector2D cam = camera::Get_instance()->Get_postion();
+    SDL_Rect dst_rect = {x - static_cast<int>(cam.X),  y- static_cast<int>(cam.Y), width, hgt};
     SDL_RenderCopyEx(Engine::Get_instance()->Get_Renderer(), Texturemap[id], &src_rect, &dst_rect, 0, nullptr, flip);
 
 }
 
-
+void Texture::DrawTile(std::string tilesetID, int tilesize, int x, int y, int row, int frame, SDL_RendererFlip flip )
+{
+    SDL_Rect src_rect = {tilesize*frame, tilesize*(row), tilesize, tilesize};
+    Vector2D cam = camera::Get_instance()->Get_postion();
+    SDL_Rect dst_rect = {x - static_cast<int>(cam.X), y -static_cast<int>(cam.Y), tilesize, tilesize};
+    SDL_RenderCopyEx(Engine::Get_instance()->Get_Renderer(), Texturemap[tilesetID], &src_rect, &dst_rect, 0, 0, flip);
+}
 

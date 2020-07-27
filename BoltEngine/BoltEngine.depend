@@ -1,51 +1,62 @@
 # depslib dependency file v1.0
-1593296401 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\main.cpp
+1595795177 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\main.cpp
 	<iostream>
 	"Timer.h"
 	"Engine.h"
+	"SDL.h"
 
-1593339941 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\engine.cpp
+1595886633 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\engine.cpp
 	"Engine.h"
 	"Warrior.h"
 	"Texture.h"
 	"Event.h"
 	"Timer.h"
 	"SDL.h"
+	"MapParser.h"
+	"camera.h"
 
-1592734541 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\engine.h
+1595843706 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\engine.h
 	"SDL.h"
 	"SDL_image.h"
+	"GameMap.h"
 
-1592745713 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\graphics\texture.cpp
+1595840761 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\graphics\texture.cpp
 	"Texture.h"
+	"camera.h"
 	"../Engine.h"
 
-1592736456 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\graphics\texture.h
+1595716193 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\graphics\texture.h
 	"SDL.h"
 	"SDL_image.h"
 	"string"
 	<map>
 
-1593339941 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\characters\warrior.cpp
+1595889689 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\characters\warrior.cpp
 	"Warrior.h"
 	"Event.h"
 	"../Graphics/Texture.h"
 	"SDL.h"
+	"camera.h"
+	"../Engine.h"
+	"collision.h"
 
-1593007071 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\characters\warrior.h
+1595879602 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\characters\warrior.h
 	"Character.h"
 	"Animation.h"
 	"RigidBody.h"
+	"colider.h"
+	"Vector2D.h"
 
 1592741748 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\characters\character.h
 	"GameObject.h"
 	<string>
 
-1592744488 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\object\gameobject.h
+1595768378 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\object\gameobject.h
 	"IObject.h"
 	"Transform.h"
 	<string>
 	"SDL.h"
+	"Point.h"
 
 1592741762 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\object\iobject.h
 
@@ -63,13 +74,13 @@
 	"Animation.h"
 	"Texture.h"
 
-1593289744 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\physics\rigidbody.h
+1595717068 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\physics\rigidbody.h
 	"Vector2D.h"
 
 1593009627 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\events\event.h
 	"SDL.h"
 
-1593010775 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\events\event.cpp
+1595582678 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\events\event.cpp
 	"Event.h"
 	"../Engine.h"
 
@@ -79,5 +90,91 @@
 	"Timer.h"
 	"SDL.h"
 
-1593341500 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\\map
+1595799858 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\\map
+
+1595798557 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\map\tilelayer.cpp
+	"TileLayer.h"
+	"Texture.h"
+
+1595706101 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\map\tilelayer.h
+	<string>
+	<vector>
+	<Layer.h>
+	"Vector2D.h"
+
+1595689633 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\map\layer.h
+
+1376507762 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\vendor\tinyxml\tinystr.cpp
+	"tinystr.h"
+
+1376507762 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\vendor\tinyxml\tinystr.h
+	<assert.h>
+	<string.h>
+
+1376507762 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\vendor\tinyxml\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1595687548 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\vendor\tinyxml\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1376507762 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\vendor\tinyxml\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1376507762 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\vendor\tinyxml\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1595762798 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\map\mapparser.cpp
+	"MapParser.h"
+	<iostream>
+	<string>
+
+1595794428 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\map\mapparser.h
+	<map>
+	<string>
+	"TileLayer.h"
+	"GameMap.h"
+	"tinyxml.h"
+
+1595799858 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\map\gamemap.h
+	<vector>
+	"Layer.h"
+
+1595765392 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\camera\camera.cpp
+	"camera.h"
+
+1595765546 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\camera\camera.h
+	"Point.h"
+	"Vector2D.h"
+	"SDL.h"
+	"../Engine.h"
+
+1595765605 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\physics\point.h
+
+1595886602 source:c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\collision\collision.cpp
+	"collision.h"
+	"../Engine.h"
+
+1595883852 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\collision\collision.h
+	"SDL.h"
+	<vector>
+	"../Engine.h"
+	"TileLayer.h"
+	"GameMap.h"
+
+1595880231 c:\users\jnyfah\documents\programs\c++\bolt-engine\boltengine\collision\colider.h
+	"SDL.h"
 

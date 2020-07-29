@@ -102,7 +102,7 @@ void Warrior::Update(float dt)
     }
      if(m_isjumping || !m_isgrounded)
      {
-        Anime->setprops("player_jump", 1,1,150);
+        Anime->setprops("player_jump", 1,1,150, SDL_FLIP_HORIZONTAL);
      }
     //trans->TranslateX(m_rigidbody->Position().X);
     //trans->TranslateY(m_rigidbody->Position().Y);

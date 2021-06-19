@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/jnyfah/Chukwu-Jennifer.svg?token=fMpTzbJKqKuu6xux4RBP&branch=master)](https://travis-ci.com/jnyfah/Chukwu-Jennifer)
+![GitHub](https://img.shields.io/github/license/jnyfah/Bolt-Engine)
 
 # Bolt-Engine
 C++ 2D Game Engine
